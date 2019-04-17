@@ -1,0 +1,10 @@
+<div class='postWrapper'>
+  <div class='userWrapper'>
+      <img class='userPic' src={{post.userPictureUrl}}/>
+        <h1 (click)='sendAuthor(post)'>{{post.username}}</h1>
+  </div>
+  <h3 class='content'>{{post.title}}</h3>
+  <img class='postPic' src={{post.pictureUrl}}/><br/>
+  <button>Like</button>
+  <button>Comment</button>
+</div>
