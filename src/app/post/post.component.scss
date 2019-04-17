@@ -1,0 +1,22 @@
+.userWrapper{
+  padding:2px;
+}
+
+.postWrapper{
+  padding:25px;
+}
+
+.userPic, .postPic{
+  border-radius: 10%
+}
+
+.postWrapper button{
+  margin-right: 5px;
+  margin-left: 5px;
+  margin-top: 10px;
+}
+
+.authorName:hover{
+  color: gray;
+  cursor: pointer;
+}

@@ -22,7 +22,12 @@ export class AppComponent {
 
   receiveAuthor(x) {
     this.authorData=this.getAuthor(x);
+    console.log(this.authorData);
     this.displayAuthor=true;
+  }
+
+  toggleModal(x){
+    this.displayAuthor=false;
   }
 
   constructor(private http: HttpClient){

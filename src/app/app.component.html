@@ -1,14 +1,9 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-</div>
 <div *ngFor="let x of posts">
   <app-post [p]=x (author)='receiveAuthor($event)'></app-post>
 </div>
 
-<app-author *ngIf='displayAuthor'>
+<app-author *ngIf='displayAuthor' [a]='authorData' (show)='toggleModal($event)'>
 </app-author>
 
 <router-outlet></router-outlet>
