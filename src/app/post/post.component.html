@@ -3,13 +3,13 @@
       <img class='userPic' src={{post.userPictureUrl}}/>
         <h3 class='authorDetails'>
           {{post.username}}<br/>
-          {{displayDate.getDate()}} {{months[displayDate.getMonth()]}} {{displayDate.getFullYear()}}
+          {{currentDay}}{{daySuffix(currentDay)}} of {{months[currentMonth]+','}} {{currentYear}}
         </h3>
   </div>
   <h1 class='postTitle'>{{post.title}}</h1>
   <img class='postPic' src={{post.pictureUrl}}/><br/>
   <div class ='postButtons'>
-    <button>Like</button>
-    <button>Comment</button>
+    {{likes}}<button (click)='increaseLikes()'>&nbsp; Like &nbsp;</button>
+    <button>&nbsp; Comment &nbsp;</button>
   </div>
 </div>

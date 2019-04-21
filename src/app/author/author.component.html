@@ -1,5 +1,15 @@
-<div class='modal'>
-  {{author}}
-  asd
+<div class="modalBackground">
 </div>
-<h3 (click)='closeModal()'>Close window</h3>
+
+<div class='modal'>
+  {{author.coverUrl}}
+  {{author.pictureUrl}}
+  {{author.name}}
+  {{author.username}}
+  {{author.email}}
+  {{author.address.street}} {{author.address.suite}} {{author.address.city}} {{author.address.zipcode}}
+  {{author.phone}}
+  {{author.website}}
+  {{author.company.name}}
+  <h3 (click)='closeModal()'>Close window</h3>
+</div>

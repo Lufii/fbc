@@ -56,3 +56,13 @@ display: inline-block;
 .postButtons{
   text-align: center;
 }
+
+.postButtons button{
+  border-radius: 5%;
+  padding: 0px;
+  font-size: 18px;
+  font-family: 'Ubuntu', sans-serif;
+  &:hover{
+    cursor: pointer;
+  }
+}
