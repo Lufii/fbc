@@ -13,20 +13,19 @@ export class AppComponent {
   self: object;
 
   getAuthor(authorid){
-    self=this;
     this.http.get('http://localhost:3000/user?userId='+authorid).subscribe(data => {
       console.log(data);
-      return data;
+      this.authorData=data;
     });
   }
 
-  receiveAuthor(x) {
-    this.authorData=this.getAuthor(x);
+  receiveAuthor(author) {
+    this.getAuthor(author);
     console.log(this.authorData);
     this.displayAuthor=true;
   }
 
-  toggleModal(x){
+  toggleModal(){
     this.displayAuthor=false;
   }
 
@@ -34,10 +33,9 @@ export class AppComponent {
     }
 
   ngOnInit(): void {
-    self=this;
     this.http.get('http://localhost:3000/posts').subscribe(data => {
       console.log(data);
-      self.posts=data;
+      this.posts=data;
     });
   }
 }

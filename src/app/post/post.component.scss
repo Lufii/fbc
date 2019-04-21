@@ -3,11 +3,16 @@
 }
 
 .postWrapper{
-  padding:25px;
+  padding:5px;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  text-align: left;
 }
 
-.userPic, .postPic{
-  border-radius: 10%
+.userPic,{
+  border-radius: 50%;
+  transition: border-radius 0.4s;
 }
 
 .postWrapper button{
@@ -16,7 +21,38 @@
   margin-top: 10px;
 }
 
-.authorName:hover{
-  color: gray;
+.userWrapper{
+display: inline-block;
+}
+
+.userWrapper:hover{
+  color: white;
   cursor: pointer;
+}
+
+.userWrapper:hover .userPic{
+  border-radius: 34%;
+}
+
+.userPic, .authorDetails{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.userPic{
+  margin-right: 10px;
+  height: 70px;
+}
+
+.postPic{
+  border-radius: 2%;
+}
+
+.postTitle{
+  margin-block-start: 10px;
+  margin-block-end: 15px;
+}
+
+.postButtons{
+  text-align: center;
 }

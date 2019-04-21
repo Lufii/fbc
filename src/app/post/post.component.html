@@ -1,10 +1,15 @@
 <div class='postWrapper'>
-  <div class='userWrapper'>
+  <div class='userWrapper' (click)='sendAuthor(post)'>
       <img class='userPic' src={{post.userPictureUrl}}/>
-        <h3 class='authorName'(click)='sendAuthor(post)'>{{post.username}}</h3>
+        <h3 class='authorDetails'>
+          {{post.username}}<br/>
+          {{displayDate.getDate()}} {{months[displayDate.getMonth()]}} {{displayDate.getFullYear()}}
+        </h3>
   </div>
-  <h1 class='content'>{{post.title}}</h1>
+  <h1 class='postTitle'>{{post.title}}</h1>
   <img class='postPic' src={{post.pictureUrl}}/><br/>
-  <button>Like</button>
-  <button>Comment</button>
+  <div class ='postButtons'>
+    <button>Like</button>
+    <button>Comment</button>
+  </div>
 </div>
