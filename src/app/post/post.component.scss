@@ -15,12 +15,6 @@
   transition: border-radius 0.4s;
 }
 
-.postWrapper button{
-  margin-right: 5px;
-  margin-left: 5px;
-  margin-top: 10px;
-}
-
 .userWrapper{
 display: inline-block;
 }
@@ -57,12 +51,16 @@ display: inline-block;
   text-align: center;
 }
 
-.postButtons button{
+.postButtons div{
+  padding: 5px;
+  margin: 10px;
+  background-color: #424242;
+  display: inline-block;
   border-radius: 5%;
-  padding: 0px;
   font-size: 18px;
   font-family: 'Ubuntu', sans-serif;
   &:hover{
     cursor: pointer;
+    color: white;
   }
 }

@@ -11,18 +11,78 @@
 }
 
 .modal{
-  position: absolute;
+  position: fixed;
   margin: 0 auto;
   top:35%;
   left:35%;
   width:30%;
-  height:30%;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  top: 15%;
+  -ms-transform: translateY(-15%);
+  transform: translateY(-15%);
   left:1%;
   right:1%;
-  background-color: purple;
   opacity: 1;
   z-index: 2;
+  max-width: 600px;
+  background-color: #FCFCFC;
+  color: black;
+  border-radius: 2%;
+}
+
+.modal p{
+  margin: 0 auto;
+}
+
+.coverPic{
+  height:150px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 2%;
+}
+
+.authorPic{
+  height: 130px;
+  position: relative;
+  top: -100px;
+  border-radius: 2%;
+}
+
+.authorName{
+  font-size: 25px;
+  position: relative;
+  top: -100px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.authorUsername{
+    font-size: 15px;
+    position: relative;
+    top: -100px;
+}
+
+.authorTable{
+  padding-left: 40px;
+  padding-right: 40px;
+  border-top: 1px solid lightgray;
+  margin: 0px auto;
+  position: relative;
+  top: -80px;
+}
+
+.authorTable td{
+  text-align: left;
+  padding: 7px;
+}
+
+.modal h3{
+  &:hover{
+    color: gray;
+    cursor: pointer;
+  }
+}
+
+.modal h3{
+  position: relative;
+  top: -40px;
 }
