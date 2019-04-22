@@ -6,14 +6,21 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./post.component.scss']
 })
 export class PostComponent implements OnInit {
-  @Input('p') post: object;
+  @Input('post') post: object;
   @Output() author = new EventEmitter<string>();
-  currentDate: date = new Date();
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+  currentDate: Date = new Date();
   currentDay: number = this.currentDate.getDate();
   currentMonth: number = this.currentDate.getMonth();
   currentYear: number = this.currentDate.getFullYear();
-  months: array<string> = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  months: Array<string> = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
   likes: number = Math.floor((Math.random()*100));
+  showCommentsSection: boolean = false;
 
   daySuffix(day: number){
     if(day===1 || day===21 || day ===31)
@@ -35,9 +42,9 @@ export class PostComponent implements OnInit {
     this.likes++;
   }
 
-  constructor() { }
-
-  ngOnInit() {
+  toggleCommentsSection(){
+    this.showCommentsSection = !this.showCommentsSection;
+    console.log(this.showCommentsSection);
   }
 
 }

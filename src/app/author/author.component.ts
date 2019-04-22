@@ -6,7 +6,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./author.component.scss']
 })
 export class AuthorComponent implements OnInit {
-  @Input('a') author: object;
+  @Input('author') author: object;
   @Output() show = new EventEmitter<boolean>();
 
   closeModal(){

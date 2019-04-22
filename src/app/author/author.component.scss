@@ -16,6 +16,7 @@
   top:35%;
   left:35%;
   width:30%;
+  min-width:300px;
   top: 15%;
   -ms-transform: translateY(-15%);
   transform: translateY(-15%);
@@ -56,9 +57,9 @@
 }
 
 .authorUsername{
-    font-size: 15px;
-    position: relative;
-    top: -100px;
+  font-size: 15px;
+  position: relative;
+  top: -100px;
 }
 
 .authorTable{

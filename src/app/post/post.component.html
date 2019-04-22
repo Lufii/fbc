@@ -1,15 +1,17 @@
 <div class='postWrapper'>
   <div class='userWrapper' (click)='sendAuthor(post)'>
-      <img class='userPic' src={{post.userPictureUrl}}/>
-        <h3 class='authorDetails'>
-          {{post.username}}<br/>
-          {{currentDay}}{{daySuffix(currentDay)}} of {{months[currentMonth]+','}} {{currentYear}}
-        </h3>
+    <img class='userPic' src={{post.userPictureUrl}}/>
+    <h3 class='authorDetails'>
+      {{post.username}}<br/>
+      {{currentDay}}{{daySuffix(currentDay)}} of {{months[currentMonth]+','}} {{currentYear}}
+    </h3>
   </div>
   <h1 class='postTitle'>{{post.title}}</h1>
   <img class='postPic' src={{post.pictureUrl}}/><br/>
   <div class ='postButtons'>
-    {{likes}}<div (click)='increaseLikes()'>&nbsp; Like &nbsp;</div>
-    <div>&nbsp; Comment &nbsp;</div>
+    {{likes}}
+    <div (click)='increaseLikes()'>Like</div>
+    <div (click)='toggleCommentsSection()'>Comment</div>
   </div>
+  <app-comments [showCommentsSection]='showCommentsSection'></app-comments>
 </div>

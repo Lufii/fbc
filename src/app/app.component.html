@@ -1,9 +1,15 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div *ngFor="let x of posts">
-  <app-post [p]=x (author)='receiveAuthor($event)'></app-post>
+<div *ngFor="let post of posts">
+  <app-post
+  [post]=post
+  (author)='getAuthor($event)'>
+  </app-post>
 </div>
 
-<app-author *ngIf='displayAuthor' [a]='authorData' (show)='toggleModal($event)'>
+<app-author
+*ngIf='displayAuthor'
+[author]='authorData'
+(show)='toggleModal()'>
 </app-author>
 
 <router-outlet></router-outlet>
